@@ -1,9 +1,14 @@
+/************ CSS Document for Strong Password Generator **************/
+
+
+/*** Global Declarations ***/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/*** No margins nor padding on our outer wrapper ***/
 html,
 body,
 .wrapper {
@@ -12,17 +17,20 @@ body,
   padding: 0;
 }
 
+/*** Default body font sans-serif ***/
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
 
+/*** Outer Div "Wrapper" Container Class ***/
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
+/***  Header Section Centered, Contains Large H1 Title ***/
 header {
   text-align: center;
   padding: 20px;
@@ -30,6 +38,7 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+/*** Card Class Contains 3 Inner Div Classes (card-header, card-body, card-footer) ***/
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -50,10 +59,12 @@ header {
   height: 2px;
 }
 
+/*** Card Body where our new password is displayed ***/
 .card-body {
   min-height: 100px;
 }
 
+/*** Card Footer with our two buttons ***/
 .card-footer {
   text-align: center;
 }
@@ -72,9 +83,11 @@ header {
   clear: both;
 }
 
+/*** Our Button styles ***/
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color: darkblue;
+  /*background-color: hsl(360, 91%, 36%);*/
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
@@ -88,6 +101,11 @@ header {
   cursor: pointer;
 }
 
+/*** Accessibility: change buttons to green when user hovers over them ***/
+.btn:hover {
+  background-color: rgb(5, 173, 27);
+}
+
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
@@ -97,6 +115,7 @@ button[disabled] {
   float: right;
 }
 
+/*** Styles for newly generated password ***/
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -118,6 +137,7 @@ button[disabled] {
   overflow: hidden;
 }
 
+/*** Media request to style for smaller screen sizes ***/
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
@@ -130,6 +150,7 @@ button[disabled] {
   }
 }
 
+/*** Second media request to style for mobile phones ***/
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;

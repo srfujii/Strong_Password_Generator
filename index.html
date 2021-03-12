@@ -5,24 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
+    <!-- Key Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
   <body>
-   
+
+    <!-- Outer Div Class Wrapper Container-->
     <div class="wrapper">
       
+      <!-- Header Styled in CSS -->
       <header>
         <h1>Password Generator</h1>
       </header>
       
+      <!-- Outer Div Card Class Contains 3 Inner Divs-->
       <div class="card">
+        
+        <!-- First Inner Div: Card Header -->
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
       
-        <!-- The interesting bit for JavaScript: Text Area -->
-        <div class="card-body">   
+        <!-- Second Inner Div: Card Body -->
+        <div class="card-body"> 
+          
+          <!-- Text Area where our newly generated password will be displayed -->
           <textarea
             readonly
             id="password"
@@ -30,18 +42,22 @@
             aria-label="Generated Password"
           ></textarea>
         </div>
-       
-        <!-- The other interesting bit for JavaScript: Button -->
+
+        <!-- Third Inner Div: Card Footer -->
         <div class="card-footer">
+
+          <!-- Generate Password Button user clicks to begin the process -->
           <button id="generate" class="btn">Generate Password</button>
+          <!-- Copy to Clipboard Button user clicks to copy the new password -->
           <button id="copytoClipboard" class="btn">Copy to Clipboard</button>
+        
         </div>
-      
-      </div>
-    </div>
+
+      </div>  <!-- End Outer Div Card Class Container-->
+    </div>  <!-- End Outer Div Class Wrapper Container -->
     
     <!-- Include our Javascript external source -->
-    <script src="script.js"></script>
+    <script src="./assets/js/script.js"></script>
   
   </body>
 </html>
